@@ -34,12 +34,15 @@ li {
   list-style: none;
 }
 
+.company-logo {
+  width: 100%;
+}
 .text-highlight {
   font-weight: bold;
 }
 
 .header,
 .footer,
-.contact-link-text {
+.link-text {
   color: var(--extra-light);
 }
