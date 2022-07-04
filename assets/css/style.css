@@ -33,6 +33,9 @@ a:hover {
 li {
   list-style: none;
 }
+i {
+  font-size: 30px;
+}
 
 .company-logo {
   width: 100%;
