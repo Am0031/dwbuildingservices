@@ -44,7 +44,7 @@ export const Projects = () => {
   };
 
   return (
-    <div>
+    <div className="main">
       <h1>DW Projects</h1>
       {state.projects && state.projects.length ? (
         state.projects.map((item) => {

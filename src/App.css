@@ -1,5 +1,24 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
+}
+
+body,
+#root {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+}
+.main {
+  flex: 2;
+  /* min-height: 90vh; */
 }
 
 .navbar {

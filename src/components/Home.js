@@ -6,7 +6,7 @@ export const Home = () => {
   //some useEffect
 
   return (
-    <div>
+    <div className="main">
       <h1>Home page</h1>
       <div>
         <p> Some intro and links to our other pages and reviews </p>

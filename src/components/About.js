@@ -6,7 +6,7 @@ export const About = () => {
   //some useEffect
 
   return (
-    <div>
+    <div className="main">
       <h1>About us</h1>
       <div>
         <p> Some description of what we do... </p>
