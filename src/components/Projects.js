@@ -24,10 +24,6 @@ export const Projects = () => {
   //useReducer state
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  //useEffect for onload repos population
-  // useEffect(() => {
-  // }, []);
-
   //function to get the info from the form and do the search
   const onSubmit = async (event) => {
     event.preventDefault();
