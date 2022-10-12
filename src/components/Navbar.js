@@ -9,12 +9,12 @@ export const Navbar = () => {
   //some states
   const { width } = useWindowDimensions();
   const [current, setCurrent] = useState("about");
-  const navigate = useNavigate();
+  const navigate = useNavigate("/home");
 
   //some useEffect
 
   const sections = [
-    { label: "Home", key: "home", path: "/" },
+    { label: "Home", key: "home", path: "/home" },
     { label: "About Us", key: "about", path: "/about" }, // remember to pass the key prop which is required for mapping
     { label: "Projects", key: "projects", path: "/projects" },
     { label: "Contact", key: "contact", path: "/contact" },
@@ -22,7 +22,8 @@ export const Navbar = () => {
 
   const onClickLinks = (e) => {
     setCurrent(e.key);
-    navigate(`${e.keyPath}`, { replace: true });
+    console.log(`/${e.keyPath[0]}`);
+    navigate(`/${e.keyPath[0]}`, { replace: true });
   };
 
   return (
