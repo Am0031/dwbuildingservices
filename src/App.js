@@ -1,10 +1,10 @@
 import "./App.css";
-import { GithubRepo } from "./components/GithubRepo";
+import { Projects } from "./components/Projects";
 
 function App() {
   return (
     <>
-      <GithubRepo />
+      <Projects />
     </>
   );
 }
