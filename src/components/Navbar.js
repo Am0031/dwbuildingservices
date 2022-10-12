@@ -14,9 +14,9 @@ export const Navbar = () => {
   //some useEffect
 
   const sections = [
-    { label: "about", key: "about", path: "/" }, // remember to pass the key prop which is required for mapping
-    { label: "projects", key: "projects", path: "/projects" },
-    { label: "contact", key: "contact", path: "/contact" },
+    { label: "About", key: "about", path: "/" }, // remember to pass the key prop which is required for mapping
+    { label: "Projects", key: "projects", path: "/projects" },
+    { label: "Contact", key: "contact", path: "/contact" },
   ];
 
   const onClickLinks = (e) => {
@@ -25,9 +25,8 @@ export const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className="navbar">
       <div className="navTitle">
-        <h1 className="title dw-title">DW Building Services</h1>
         <Image
           className="logo-image"
           width={100}
@@ -41,6 +40,7 @@ export const Navbar = () => {
           <Menu
             onClick={onClickLinks}
             selectedKeys={[current]}
+            style={{ flex: "auto", minWidth: 0 }}
             mode="horizontal"
             items={sections}
             overflowedIndicator={<MenuOutlined />}
