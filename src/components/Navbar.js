@@ -37,7 +37,7 @@ export const Navbar = () => {
       </div>
 
       <div className="navLink">
-        {width > 420 && (
+        {width > 480 && (
           <Menu
             onClick={onClickLinks}
             selectedKeys={[current]}
@@ -48,7 +48,7 @@ export const Navbar = () => {
             disabledOverflow="true"
           />
         )}
-        {width < 420 && (
+        {width < 480 && (
           <Menu
             onClick={onClickLinks}
             selectedKeys={[current]}
