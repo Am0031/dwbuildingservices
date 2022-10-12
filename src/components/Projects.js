@@ -51,7 +51,7 @@ export const Projects = () => {
           return (
             <div key={item.id} id={item.id}>
               <h2>{item.name}</h2>
-              <h2>{item.description}</h2>
+              <h2>{item.short}</h2>
               <button
                 style={{ height: "20", width: "300" }}
                 id={item.id}
@@ -69,6 +69,7 @@ export const Projects = () => {
       {state.selectedProject && (
         <div key={state.selectedProject.id} id={state.selectedProject.id}>
           <h2>{state.selectedProject.name}</h2>
+          <h2>{state.selectedProject.short}</h2>
           <h2>{state.selectedProject.description}</h2>
           <h3>{state.selectedProject.tags}</h3>
         </div>
