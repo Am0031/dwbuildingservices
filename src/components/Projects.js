@@ -12,11 +12,11 @@ export const Projects = () => {
   const reducer = (state, action) => {
     switch (action.type) {
       case "projects":
-        return { ...state, selectedRepo: undefined, repos: action.newRepos };
-      case "selectedProject":
-        return { ...state, selectedRepo: action.selection };
+        return { ...state };
+      case "selected":
+        return { ...state, selectedProject: action.selection };
       case "projectCount":
-        return { ...state, username: action.username };
+        return { ...state };
       default:
         throw new Error();
     }
@@ -39,7 +39,7 @@ export const Projects = () => {
     dispatch({ type: "username", username: event.target.value });
   };
 
-  //function to handle click on a repo to see more details
+  //function to handle click on a project to see more details
   const onProjectClick = (event) => {
     const selection = state.projects.filter(
       (item) => item.id === event.target.id
@@ -56,11 +56,26 @@ export const Projects = () => {
             <div key={item.id} id={item.id}>
               <h2>{item.name}</h2>
               <h2>{item.description}</h2>
+              <button
+                style={{ height: "20", width: "300" }}
+                id={item.id}
+                onClick={onProjectClick}
+              >
+                {" "}
+                View details
+              </button>
             </div>
           );
         })
       ) : (
         <div> No projects </div>
+      )}
+      {state.selectedProject && (
+        <div key={state.selectedProject.id} id={state.selectedProject.id}>
+          <h2>{state.selectedProject.name}</h2>
+          <h2>{state.selectedProject.description}</h2>
+          <h3>{state.selectedProject.tags}</h3>
+        </div>
       )}
     </div>
   );
