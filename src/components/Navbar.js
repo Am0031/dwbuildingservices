@@ -14,7 +14,8 @@ export const Navbar = () => {
   //some useEffect
 
   const sections = [
-    { label: "About", key: "about", path: "/" }, // remember to pass the key prop which is required for mapping
+    { label: "Home", key: "home", path: "/" },
+    { label: "About Us", key: "about", path: "/about" }, // remember to pass the key prop which is required for mapping
     { label: "Projects", key: "projects", path: "/projects" },
     { label: "Contact", key: "contact", path: "/contact" },
   ];
@@ -40,10 +41,11 @@ export const Navbar = () => {
           <Menu
             onClick={onClickLinks}
             selectedKeys={[current]}
-            style={{ flex: "auto", minWidth: 0 }}
+            style={{ flex: "auto", textAlign: "center", minWidth: 0 }}
             mode="horizontal"
             items={sections}
             overflowedIndicator={<MenuOutlined />}
+            disabledOverflow="true"
           />
         )}
         {width < 420 && (
